@@ -1,6 +1,5 @@
 Feature: 記事
 
-  @now
   Scenario: 記事を登録する
     Given 記事登録ページに遷移
     When 記事情報を入力してサブミット
@@ -11,7 +10,7 @@ Feature: 記事
    @now
    Scenario Outline:
     Given 記事登録ページに遷移
-    When 記事情報のフォーム<"column"> に 不正な <"value"> を入力してサブミット
+    When 記事情報のフォーム"<column>" に 不正な "<value>" を入力してサブミット
     Then "<error message>"が表示されている
 
     Examples:
@@ -19,7 +18,6 @@ Feature: 記事
         |title   |     |タイトルを入力してください |
         |article |     |本文を入力してください    |
 
-  @now
   Scenario: 記事一覧が表示される
     Given 記事が"2"件ある
     When 記事一覧ページに遷移
