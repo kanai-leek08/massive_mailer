@@ -20,22 +20,6 @@ Feature: 記事
         |article |     |本文を入力してください    |
 
   @now
-  Scenario: 記事登録エラー
-    Given 記事登録ページに遷移
-    When 記事情報を入力してサブミット
-        |title|ゴールデンレトリバーがうちにきた!|
-        |body |                             |
-    Then "本文を入力してください"が表示されている
-
-  @now
-  Scenario: 記事登録エラー
-    Given 記事登録ページに遷移
-    When 記事情報を入力してサブミット
-        |title||
-        |body |xxx|
-    Then "タイトルを入力してください"が表示されている
-
-  @now
   Scenario: 記事一覧が表示される
     Given 記事が"2"件ある
     When 記事一覧ページに遷移
