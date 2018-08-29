@@ -20,7 +20,6 @@ Feature:
     And User clicks the answer button
     Then User should see the "end of test" page
 
-  @now
   Scenario: テストページで不正解を選んで、回答ボタンを押下するとAdviceページが表示されること
     Given User is in the test page
     When User chooses the incorrect option
